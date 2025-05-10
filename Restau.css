@@ -3,13 +3,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
-
+:root{
+    --bg: #010103;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html{
+    overflow-y: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth; /*deplacement fluide */
+}
+
+htlm::-webkit-scrollbar{ /*personnalisation de la barre de navigation */
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{ 
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 5rem;
+
+}
 body{
    
     font-family: "Montserrat", sans-serif;
@@ -17,7 +37,7 @@ body{
     font-weight: weight;
     font-style: normal;
     background-attachment: fixed;
-    background: url(Images/coffee-424763.jpg);
+    background: var(--bg);
     background-size: cover;
     background-repeat: no-repeat;
    
@@ -32,6 +52,7 @@ body{
     justify-content: space-between;
     position: fixed;
     display: flex;
+    z-index: 1000;
 }
 
 nav{
@@ -189,17 +210,18 @@ hr{
     align-items: center;
     justify-content: right;
     top: 110px;
+    outline: none;
+    padding: 5px;
    
    
 }
 
-#search .fa-solid {
-    color: black;
+
     
   
 
     
-}
+
 
 
 
@@ -254,6 +276,8 @@ hr{
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.1;
     color: white;
     font-style: normal;
 }
