@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-attachment: fixed;
+    background: url(Images/coffee-424763.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+}
+/***********************************************/
+
+#container{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 110px;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+}
+
+nav{
+    border: px solid black; 
+}
+.fa-magnifying-glass,
+.fa-cart-shopping{
+    color: white;
+    cursor: pointer;
+}
+
+.fa-solid:hover{
+    color: #eb9b1a;
+}
+.contain .icone{
+    
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+.contain{
+   
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    width: 100px;
+    height: 100px;
+}
+.logo{
+    justify-content: left;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid gray;
+    color: #eb9b1a;
+}
+.nav{
+    width: 700px;
+}
+hr{
+    width: 100%;
+    height: 2px;
+}
+
+/********************************************************/
+.sous{
+    border: 1px solid rgb(221, 211, 211);
+    height: 600px;
+    width: 320px;
+    visibility: hidden;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    top: 110px;
+}
+
+.sous.visible {
+    visibility: visible; /* Rendre visible */
+    animation: defile 2s ease ; /* Démarrer l'animation */
+}
+
+@keyframes defile{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.sous .article{
+    border: px solid black;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sous .article div{
+    border: px solid black;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sous .article div span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.fa-xmark{
+    margin-right: 25px;
+}
+.sous .plat{
+    width: 100px;
+    height: 100px;
+}
+.buy{
+   
+    width: 280px;
+    margin-top: 20px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #eb9b1a;
+    margin-left: 10px;
+}
+
+.buy:hover{
+    width: 285px;
+    height: 45px;
+    background-color: rgb(46, 10, 10);
+}
+.buy p{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.fa-xmark{
+    color: black; 
+    left: 10px;
+}
+
+
+/**************************************************/
+#search{
+   
+    position: fixed;
+    width: 400px;
+    background-color: white;
+    height: 40px;
+    right: 180px;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    top: 110px;
+   
+   
+}
+
+#search .fa-solid {
+    color: black;
+    
+  
+
+    
+}
+
+
+
+/********************************************/
+
+
+
+#corp_1{
+    border: 0px solid black;
+    width: 700px;
+    height: 400px;
+    left: 100px;
+    position: relative;
+    top: 35vh;
+}
+
+#corp_1 .div{
+    border: 0px solid rgb(206, 191, 191);
+    height: 80px;
+    color: white;
+}
+#corp_1 .get{
+    height: 60px;
+    border: px solid black;
+    
+}
+#corp_1 .get p{
+    
+    background-color: #eb9b1a;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    
+}
+
+#corp_1 .get p:hover{
+    width: 110px;
+    height: 40px;
+    background-color:  rgb(46, 10, 10);
+}
+
+#corp_1 .font{
+    height: 170px;
+}
+#corp_1 .font p{
+    font-size: 60px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: white;
+    font-style: normal;
+}
+
+
+/***********************************/
+
