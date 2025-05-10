@@ -5,6 +5,7 @@
 
 :root{
     --bg: #010103;
+    --border: 1px solid black;
 }
 *{
     margin: 0;
@@ -13,13 +14,13 @@
 }
 
 html{
-    overflow-y: hidden;
-    scroll-padding-top: 9rem;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
     scroll-behavior: smooth; /*deplacement fluide */
 }
 
-htlm::-webkit-scrollbar{ /*personnalisation de la barre de navigation */
-    width: .8rem;
+html::-webkit-scrollbar{ /*personnalisation de la barre de navigation */
+    width: .2rem;
 }
 
 html::-webkit-scrollbar-track{ 
@@ -27,7 +28,7 @@ html::-webkit-scrollbar-track{
 }
 html::-webkit-scrollbar-thumb{
     background-color: #fff;
-    border-radius: 5rem;
+    border-radius: 2rem;
 
 }
 body{
@@ -46,6 +47,9 @@ body{
 
 header{
     position:relative;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
     z-index: 1000;
     
 }
@@ -72,6 +76,7 @@ nav{
 
 .fa-solid:hover{
     color: #eb9b1a;
+    transition: .5s ease;
 }
 .contain .icone{
     
@@ -112,6 +117,7 @@ nav ul li a{
 nav ul li a:hover{
     border-bottom: 2px solid gray;
     color: #eb9b1a;
+    transition: .8s ease;
 }
 .nav{
     width: 700px;
@@ -194,6 +200,7 @@ hr{
 
 .buy:hover{
     width: 285px;
+    transition: .5s ease;
     height: 45px;
     background-color: rgb(46, 10, 10);
 }
@@ -269,6 +276,7 @@ hr{
     border: 0px solid rgb(160, 13, 13);
     min-height: 100vh;
     display: flex;
+    position: relative;
     justify-content: center;
     background: url('Images/coffee-424763.jpg');
     background-size: cover;
@@ -304,6 +312,7 @@ hr{
 
 #corp_1 .get p:hover{
     width: 110px;
+    transition: .5s ease;
     height: 40px;
     background-color:  rgb(46, 10, 10);
 }
@@ -325,3 +334,82 @@ hr{
 
 /***********************************/
 
+.about{
+    border: 1px solid whitesmoke;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about .title{
+    padding-top: 40px;
+}
+.about .title p {
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: #eb9b1a;
+}
+
+.about .title p span{
+    color: white;
+}
+.about-contain{
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid white;
+    padding: 70px;
+}
+
+.about-contain .picture{
+    border:  0px solid white;
+}
+
+.about-contain .img{
+    width: 600px;
+    height: 400px;
+}
+
+.about-contain .contain-text{
+    border:  0px solid white;
+    background-color: #13131a;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+}
+
+.about-contain .contain-text h3{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    padding-bottom:20px ;
+    padding-top: 20px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: white;
+}
+.about-contain .contain-text p{
+    color: white;
+    width: 550px;
+   
+}
+.about-contain .contain-text .more{
+    background-color: #eb9b1a;
+    color: white;
+    width: 120px;
+    margin-top: 15px;
+    cursor: pointer;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    align-items: center;
+    font-weight: 500;
+}
+.about-contain .contain-text .more:hover{
+    width: 130px;
+    transition: .5s ease;
+    height: 40px;
+    background-color:  rgb(46, 10, 10);
+}
