@@ -6,10 +6,14 @@ const rech = document.querySelector('#search');
 
 
 search.addEventListener('click', ()=> {
-    if(rech.style.visibility === 'hidden'){
-        rech.style.visibility = 'visible'
-    }else{
-        rech.style.visibility = 'hidden'
+    if (rech.classList.contains('visible')) {
+        rech.classList.remove('visible'); // Supprimer la classe pour cacher
+        rech.style.visibility = 'hidden'; // Masquer après l'animation
+        rech.style.opacity = '0'; // Réinitialiser l'opacité
+    } else {
+        rech.style.visibility = 'visible'; // Rendre visible
+        rech.classList.add('visible'); // Ajouter la classe pour afficher
+        rech.style.opacity = '1'; // Rendre visible immédiatement
     }
 })
 

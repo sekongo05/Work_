@@ -43,16 +43,22 @@ body{
    
     
 }
+
+header{
+    position:relative;
+    z-index: 1000;
+    
+}
 /***********************************************/
 
-#container{
+header #container{
     border-bottom: 1px solid gray;
     width: 100%;
     height: 110px;
+    border: 2px solid wheat;
     justify-content: space-between;
-    position: fixed;
     display: flex;
-    z-index: 1000;
+   
 }
 
 nav{
@@ -165,6 +171,10 @@ hr{
 .fa-xmark{
     margin-right: 25px;
 }
+
+.fa-xmark:hover{
+    cursor: pointer;
+}
 .sous .plat{
     width: 100px;
     height: 100px;
@@ -199,7 +209,6 @@ hr{
 
 /**************************************************/
 #search{
-   
     position: fixed;
     width: 400px;
     background-color: white;
@@ -211,12 +220,39 @@ hr{
     justify-content: right;
     top: 110px;
     outline: none;
-    padding: 5px;
-   
+    padding: 0px;
    
 }
+#recherche{
+    color: #010103;
+    margin-right: 5px;
+}
+#recherche:hover{
+    color: #eb9b1a;
+}
+#search input{
+    width: 90%;
+    border: none;
+    padding: 5px;
+    height: 100%;
+    outline: none;
+    font-size: 1rem;
+}
+ 
+@keyframes anim{
+    0%{
+        transform: translatey(1%);
+        opacity: 0;
 
-
+    }100%{
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+#search.visible{
+    visibility: visible; /* Rendre visible */
+    animation: anim 0.5s ease ; /* Démarrer l'animation */
+}
     
   
 
@@ -230,23 +266,27 @@ hr{
 
 
 #corp_1{
-    border: 0px solid black;
-    width: 700px;
-    height: 400px;
-    left: 100px;
-    position: relative;
-    top: 35vh;
+    border: 0px solid rgb(160, 13, 13);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url('Images/coffee-424763.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
 }
 
 #corp_1 .div{
     border: 0px solid rgb(206, 191, 191);
     height: 80px;
+    width: 800px;
+    padding-left: 100px;
     color: white;
 }
 #corp_1 .get{
     height: 60px;
-    border: px solid black;
-    
+    border: px solid black; 
 }
 #corp_1 .get p{
     
@@ -269,7 +309,7 @@ hr{
 }
 
 #corp_1 .font{
-    height: 170px;
+    height: 140px;
 }
 #corp_1 .font p{
     font-size: 60px;
