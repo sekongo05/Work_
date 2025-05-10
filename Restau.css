@@ -428,9 +428,10 @@ hr{
 
 
 .menu{
-    border: 0px solid whitesmoke;
+    border: 1px solid whitesmoke;
     min-height: 100vh;
     color: white;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -517,4 +518,32 @@ hr{
     height: 40px;
     color: white;
     background-color:  rgb(46, 10, 10);
+}
+
+/***********************/
+
+.product{
+    border: 1px solid whitesmoke;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product .titre{
+    border: 0px solid white;
+    padding: 50px;
+}
+.product .titre p{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: white;
+}
+
+.product .titre p span{
+    color: #eb9b1a;
 }
