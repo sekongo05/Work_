@@ -522,7 +522,12 @@ hr{
     background-color:  rgb(46, 10, 10);
 }
 
+
+
 /***********************/
+
+
+
 
 .product{
     border: 0px solid whitesmoke;
@@ -679,5 +684,146 @@ hr{
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    color: white;
+}
+
+
+/************************************/
+
+
+
+
+.review{
+    border: 0px solid whitesmoke;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review .titre{
+    border: 0px solid white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.review .titre p{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: white;
+}
+
+.review .titre p span{
+    color: #eb9b1a;
+}
+
+#review-container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 140px;
+   /* border: var(--white);*/
+}
+
+.review-contain{
+    border: var(--grey);
+    width: 400px;
+    padding: 30px;
+    height: 500px;
+}
+.review-quote{
+   /* border: var(--white);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.review-quote .fa-quote-right{
+    font-size: 100px;
+    color: #eb9b1a;
+}
+.review-text{
+   /* border: var(--white);*/
+    width: 100%;
+    height:170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+.review-picture{
+    width: 100%;
+    height: 200px;
+    /*border: var(--white); */
+}
+.review-photo{
+   /* border: var(--white);*/
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review-photo .photo{
+    border-radius: 50%;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+}
+ .review-nom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .review-nom p{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+ }
+ .review-rate{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+ }
+
+
+
+ /*******************************************/
+
+
+
+
+ .contact{
+    border: 1px solid whitesmoke;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .titre{
+    border: 0px solid white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.contact .titre p{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color:#eb9b1a;
+}
+
+.contact .titre p span{
     color: white;
 }
