@@ -3,9 +3,18 @@ const shop = document.querySelector('.fa-cart-shopping');
 const sous = document.querySelector('.sous');
 const rech = document.querySelector('#search');
 
+const rate = document.querySelectorAll('.fa-star');
 
 
-search.addEventListener('click', ()=> {
+rate.forEach(star => {
+    star.addEventListener('click', () => {
+        star.classList.toggle('active');
+    })
+});
+
+
+
+search.addEventListener('click', () => {
     if (rech.classList.contains('visible')) {
         rech.classList.remove('visible'); // Supprimer la classe pour cacher
         rech.style.visibility = 'hidden'; // Masquer après l'animation
@@ -15,7 +24,7 @@ search.addEventListener('click', ()=> {
         rech.classList.add('visible'); // Ajouter la classe pour afficher
         rech.style.opacity = '1'; // Rendre visible immédiatement
     }
-})
+});
 
 
 
@@ -29,4 +38,19 @@ shop.addEventListener('click', () => {
         sous.classList.add('visible'); // Ajouter la classe pour afficher
         sous.style.opacity = '1'; // Rendre visible immédiatement
     }
-})
+});
+
+
+
+  const btn1 = document.querySelectorAll('.button');
+ 
+    btn1.addEventListener("mousedown", () => {
+    btn1.style.transform = "translateY(10px)";
+    btn1.style.boxShadow = "inset 0 2px 9px";
+  });
+
+    btn1.addEventListener("mouseup", () => {
+    btn1.style.transform = "translateY(0)";
+    btn1.style.boxShadow = "none";
+  });
+

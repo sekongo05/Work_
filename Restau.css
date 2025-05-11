@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100..900&family=Oswald:wght@700&family=Supermercado+One&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 :root{
@@ -250,25 +252,17 @@ hr{
 #search input{
     width: 90%;
     border: none;
+    border-bottom: 1px #13131a;
     padding: 5px;
     height: 100%;
     outline: none;
     font-size: 1rem;
 }
  
-@keyframes anim{
-    0%{
-        transform: translatey(1%);
-        opacity: 0;
 
-    }100%{
-        transform: translatey(0);
-        opacity: 1;
-    }
-}
 #search.visible{
     visibility: visible; /* Rendre visible */
-    animation: anim 0.5s ease ; /* Démarrer l'animation */
+    animation:  0.5s ease ; /* Démarrer l'animation */
 }
     
   
@@ -306,11 +300,12 @@ hr{
     height: 60px;
     border: px solid black; 
 }
-#corp_1 .get p{
+#corp_1 .get-button{
     
     background-color: #eb9b1a;
     color: white;
     width: 100px;
+    margin-left: 100px;
     cursor: pointer;
     height: 35px;
     display: flex;
@@ -320,10 +315,9 @@ hr{
     
 }
 
-#corp_1 .get p:hover{
-    width: 110px;
+#corp_1 .get-button:hover{
+   
     transition: .5s ease;
-    height: 40px;
     background-color:  rgb(46, 10, 10);
 }
 
@@ -501,7 +495,7 @@ hr{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu .menu-contain .contain .card{
+.contain .button{
     border: 0px solid black;
     width: 150px;
     margin-top: 30px;
@@ -514,7 +508,7 @@ hr{
     background-color: #eb9b1a;
 }
 
-.menu .menu-contain .contain .card:hover{
+.contain .button:hover{
     width: 160px;
     transition: .5s ease;
     height: 40px;
@@ -524,7 +518,12 @@ hr{
 
 
 
-/***********************/
+
+
+
+/***************************************/
+
+
 
 
 
@@ -587,6 +586,12 @@ hr{
     margin-bottom: -10px;
 }
 
+.fa-star{
+    color: white;
+}
+.fa-star.active{
+    color: #eb9b1a;
+}
 #product-container .contain .product-icon .fa-solid:hover{
     color: white;
     cursor: pointer;
@@ -980,6 +985,13 @@ hr{
     width: 400px;
     height: 230px;
 }
+
+.blog-thé:hover{
+     width: 390px;
+     transition: 0.5s ease-in-out;
+    height: 220px;
+}
+
 .blog-text{
     width: 100%;
     height: 200px;
@@ -1025,7 +1037,114 @@ hr{
 }
 
 .blog-more:hover{
-    transition: .5s ease;
+  
     color: white;
     background-color:  rgb(46, 10, 10);
+    transition: transform 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+  
+#footer{
+  /*  border: 1px solid whitesmoke;*/
+    min-height: 40vh;
+    color: white;
+    position: relative;
+    background-color: #13131a;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container{
+   /* border: var(--white);*/
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-logo{
+   /* border: var(--white);*/
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.footer-logo .logo{
+    background-color: #eb9b1a;
+    height: 40px;
+    display: flex;
+    border-radius: 50px;
+    width: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo .logo:hover{
+     color: white;
+     background-color:  rgb(46, 10, 10);
+     transition: 0.5s ease;
+     transform:rotate(360deg) ;
+}
+
+
+.footer-nav{
+     /* border: var(--white);*/
+      width: 100%;
+      margin-top: 20px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+}
+.footer-nav ul{
+    display: flex;
+   
+    width: 900px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-nav ul li{
+    list-style: none;
+    border: var(--grey);
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+}
+
+
+.footer-nav ul li:hover{
+    background-color: #eb9b1a;
+    transition: 0.5s ease;
+}
+.footer-nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-end{
+    /*border: var(--white);*/
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-end p span{
+    color: #eb9b1a;
 }
