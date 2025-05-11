@@ -354,7 +354,7 @@ hr{
     align-items: center;
 }
 .about .title{
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .about .title p {
     font-size: 40px;
@@ -430,7 +430,7 @@ hr{
 
 
 .menu{
-    border: 1px solid whitesmoke;
+    border: 0px solid whitesmoke;
     min-height: 100vh;
     color: white;
     position: relative;
@@ -442,7 +442,7 @@ hr{
 .menu .titre{
     padding-top: 40px;
     border: 0px solid white;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     
 }
 .menu .titre p {
@@ -525,7 +525,7 @@ hr{
 /***********************/
 
 .product{
-    border: 1px solid whitesmoke;
+    border: 0px solid whitesmoke;
     min-height: 100vh;
     color: white;
     position: relative;
@@ -536,7 +536,8 @@ hr{
 
 .product .titre{
     border: 0px solid white;
-    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 5px;
 }
 .product .titre p{
     font-size: 40px;
@@ -565,8 +566,9 @@ hr{
     width: 350px;
     display: block;
     padding: 20px;
+    padding-top: 5px;
     text-align: center;
-    height: 550px ;
+    height: 520px ;
 }
 
 #product-container .contain .product-icon{
@@ -575,19 +577,28 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     height: 70px;
     margin-left: 75px;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
+}
+
+#product-container .contain .product-icon .fa-solid:hover{
+    color: white;
+    cursor: pointer;
 }
 
 #product-container .contain .product-icon div{
     border: var(--grey);
     padding: 10px;
-
 }
+#product-container .contain .product-icon div:hover{
+    background-color: #eb9b1a;
+    cursor: pointer;
+    border: none;
+}
+
 #product-container .contain .product-image{
-    border: var(--white); 
+    /*border: var(--white); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -596,20 +607,40 @@ hr{
     height: 300px;
 }
 
-#product-container .contain .product-image .b{
-    width: 200px;
-    height: 300px;
-}
-
 #product-container .contain .product-image .a{
     width: 300px;
-    height: 330px;
+    height: 350px;
+}
+
+#product-container .contain .product-image .a:hover{
+    width: 310px;
+    transition: 0.5s ease;
+    height: 360px;
+}
+
+#product-container .contain .product-image .b{
+    width: 200px;
+    height: 280px;
+}
+#product-container .contain .product-image .b:hover{
+    width: 210px;
+    transition: 0.5s ease;
+    height: 290px;
 }
 
 #product-container .contain .product-image .c{
     width: 210px;
-    height: 340px
+    height: 290px
 }
+
+#product-container .contain .product-image .c:hover{
+    width: 220px;
+    transition: 0.5s ease;
+    height: 300px;
+}
+
+
+
 #product-container .contain .product-description{
    /* border: var(--white); */
     width: 200px;
@@ -619,7 +650,7 @@ hr{
     flex-direction: column;
     align-items: center;
     margin-left: 50px;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 #product-container .contain .product-description p{
     margin: 10px;
@@ -632,7 +663,9 @@ hr{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.fa-solid:hover{
+    cursor: pointer;
+}
 
 #product-container .contain .product-description p span{
     font-size: 12px;
