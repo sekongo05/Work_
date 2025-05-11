@@ -920,3 +920,112 @@ hr{
     color: white;
     background-color:  rgb(46, 10, 10);
 }
+
+
+/************************************************************/
+
+
+.blog{
+    border: 0px solid whitesmoke;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog .titre{
+    border: 0px solid white;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.blog .titre p{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: white;
+}
+
+.blog .titre p span{
+    color: #eb9b1a;
+}
+
+#blog-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 580px;
+    padding: 140px;
+   /* border: var(--white);*/
+    justify-content: space-between;
+}
+.blog-contain{
+    width: 400px;
+    height: 500px;
+    border: var(--grey);
+}
+
+.blog-picture {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 230px;
+    justify-content: center;
+    
+}
+
+.blog-thé{
+    width: 400px;
+    height: 230px;
+}
+.blog-text{
+    width: 100%;
+    height: 200px;
+    display: block;
+    padding: 10px;
+    justify-content: left;
+    /*border: var(--white);*/
+}
+.blog-text p{
+   /* border: var(--white);*/
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    justify-content: left;
+}
+.blog-text .first{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.blog-text .second{
+    color: #eb9b1a;
+}
+
+.blog-text .third{
+    color: white;
+    opacity: 0.5;
+}
+.blog-more{
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    background-color: #eb9b1a;
+    justify-content: center;
+    
+}
+
+.blog-more:hover{
+    transition: .5s ease;
+    color: white;
+    background-color:  rgb(46, 10, 10);
+}
