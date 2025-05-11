@@ -802,7 +802,7 @@ hr{
 
 
  .contact{
-    border: 1px solid whitesmoke;
+    border: 0px solid whitesmoke;
     min-height: 100vh;
     color: white;
     position: relative;
@@ -814,7 +814,7 @@ hr{
 .contact .titre{
     border: 0px solid white;
     padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .contact .titre p{
     font-size: 40px;
@@ -826,4 +826,97 @@ hr{
 
 .contact .titre p span{
     color: white;
+}
+#contact-container{
+    /*border: var(--white);*/
+    width: 100%;
+    height: 600px;
+}
+.contact-contain{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+}
+.contact-map{
+    
+    width: 600px;
+    height: 450px;
+}
+.contact-form{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    background: #13131a;
+}
+
+.contact-form .formulaire{
+   /* border: var(--white);*/
+    width: 550px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-form .formulaire h2{
+    margin-bottom: 20px;
+}
+
+.contact-input{
+    /*border: var(--white);*/
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.contact-input .fa-solid{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.contact-form .formulaire input{
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
+   
+
+}
+.input{
+    width: 450px;
+    background-color: transparent;
+    border: var(--grey);
+    text-transform: capitalize;
+    color: white;
+    height: 40px;
+}
+
+.contact-submit{
+   
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #eb9b1a;
+    transition: 1s ease;
+    color: white;
+    height: 40px;
+}
+
+.contact-submit:hover{
+    transition: .5s ease;
+    color: white;
+    background-color:  rgb(46, 10, 10);
 }
