@@ -52,7 +52,8 @@ body{
 header{
     position:relative;
     position: sticky;
-    border-bottom: 2px solid gray;
+   
+    box-shadow: 0px 5px 10px #eb9b1a;
     top: 0;
     background-color: var(--bg);
     z-index: 1000;
@@ -134,7 +135,7 @@ hr{
 
 /********************************************************/
 .sous{
-    border: 1px solid rgb(221, 211, 211);
+    border: 0px solid rgb(221, 211, 211);
     height: 600px;
     width: 320px;
     visibility: hidden;
@@ -170,7 +171,7 @@ hr{
     }
 }
 .sous .article{
-    border: 1px solid black;
+    border: 0px solid black;
     height: 100px;
     display: flex;
     align-items: center;
