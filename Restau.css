@@ -140,6 +140,7 @@ hr{
     visibility: hidden;
     background-color: white;
     position: fixed;
+    overflow: auto;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -169,37 +170,82 @@ hr{
     }
 }
 .sous .article{
-    border: px solid black;
+    border: 1px solid black;
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.sous .article div{
-    border: px solid black;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.sous .article div span{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-}
-.fa-xmark{
-    margin-right: 25px;
+    justify-content: left;
 }
 
-.fa-xmark:hover{
-    cursor: pointer;
+.sous .article .article-image{
+     border: 0px solid black;
+     width: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100px;
 }
-.sous .plat{
+.article-description {
+    border: 0x solid black;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.article-image .plat{
     width: 100px;
-    height: 100px;
+    height: 110px;
 }
+.article-contain p{
+    border: 0px solid black;
+    width: 150px;
+    height: 70px;
+}
+.article-contain p span{
+    margin-top: 10px;
+    width: 70px;
+    display: flex;
+    border: 0px solid black;
+}
+.article-contain .article-qte{
+     border: 0px solid black;
+     display: flex;
+     width: 80px;
+}
+
+.article-remove{
+    border: 0px solid black;
+    width: 50px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+}
+.article-contain .article-qte div{
+    border: 1px solid rgb(229, 225, 225);
+     display: flex;
+     width: 20px;
+     border-radius: 5px;
+     justify-content: center;
+     align-items: center;
+}
+
+#less, #more{
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#less:hover, #more:hover{
+    color: #eb9b1a;
+}
+
+#hr{
+    width: 270px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
 .buy{
-   
-    width: 280px;
+
+    width: 150px;
     margin-top: 20px;
     display: flex;
     cursor: pointer;
@@ -207,15 +253,24 @@ hr{
     align-items: center;
     height: 40px;
     background-color: #eb9b1a;
-    margin-left: 10px;
+    margin-left: 85px;
 }
 
 .buy:hover{
-    width: 285px;
+    width: 155px;
     transition: .5s ease;
     height: 45px;
     background-color: rgb(46, 10, 10);
 }
+
+.article-total{
+    display: flex;
+    /*border: var(--grey);*/
+    padding-top: 5px;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
 .buy p{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -984,6 +1039,7 @@ hr{
 .blog-thé{
     width: 400px;
     height: 230px;
+    object-fit: contain;
 }
 
 .blog-thé:hover{

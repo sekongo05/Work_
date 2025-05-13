@@ -1,10 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const search= document.querySelector('.fa-magnifying-glass');
 const shop = document.querySelector('.fa-cart-shopping');
 const sous = document.querySelector('.sous');
 const rech = document.querySelector('#search');
-
 const rate = document.querySelectorAll('.fa-star');
-
+const less = document.getElementById('less');
+const more = document.getElementById('more');
 
 rate.forEach(star => {
     star.addEventListener('click', () => {
@@ -54,3 +56,24 @@ shop.addEventListener('click', () => {
     btn1.style.boxShadow = "none";
   });
 
+
+let count = parseInt(document.getElementsByClassName('qte').textContent); 
+const compteur = document.getElementsByClassName('qte');
+
+
+more.addEventListener('click', () => {
+    count++;
+    compteur.textContent = 8;
+});
+
+less.addEventListener('click', () => {
+    if (count > 0) { 
+        count--;
+        compteur.textContent = 5;
+    }
+});
+
+
+
+
+})
