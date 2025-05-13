@@ -44,36 +44,52 @@ shop.addEventListener('click', () => {
 
 
 
-  const btn1 = document.querySelectorAll('.button');
- 
-    btn1.addEventListener("mousedown", () => {
-    btn1.style.transform = "translateY(10px)";
-    btn1.style.boxShadow = "inset 0 2px 9px";
-  });
+ /*  ajout d'element dans le panier */
+const sousContent = document.querySelector(".sous-content")
 
-    btn1.addEventListener("mouseup", () => {
-    btn1.style.transform = "translateY(0)";
-    btn1.style.boxShadow = "none";
-  });
-
-
-let count = parseInt(document.getElementsByClassName('qte').textContent); 
-const compteur = document.getElementsByClassName('qte');
-
-
-more.addEventListener('click', () => {
-    count++;
-    compteur.textContent = 8;
+const addArticle =document.querySelectorAll('.bouton');
+addArticle.forEach(bouton => {
+    bouton.addEventListener('click', event => {
+        const contain = event.target.closest('.contain');
+        addToCart(contain);
+    });
 });
 
-less.addEventListener('click', () => {
-    if (count > 0) { 
-        count--;
-        compteur.textContent = 5;
-    }
-});
+const addToCart = contain => {
+    const articleImage = contain.querySelector("img").src;
+    const articleDescription = contain.querySelector(".description").textContent;
+    const articlePrix = contain.querySelector(".prix").textContent;
+    const sousArticle = document.createElement("div");
+
+    sousArticle.classList.add("article");
+
+    sousArticle.innerHTML = `<div class="article-image">
+                                <img src="${articleImage}" alt=""  class="plat">
+                            </div>
+                            <div class="article-description">    
+                                <div class="article-contain">
+                                    <p>${articleDescription}  <br><span>${articlePrix}</span></p>
+                                    <div class="article-qte">
+                                        <div id="less"> - </div>
+                                        <div class="qte" >1</div>
+                                        <div id="more"> + </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article-remove">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>` ;
+                            
+                            
+                            sousContent.appendChild(sousArticle);
+                            /*  Supprimer des éléments dans le panier  */
+
+                            sousArticle.querySelector('.fa-trash-can').addEventListener('click', () =>{
+                            sousArticle.remove();
+        })
+        };
 
 
 
 
-})
+    });
