@@ -5,8 +5,7 @@ const shop = document.querySelector('.fa-cart-shopping');
 const sous = document.querySelector('.sous');
 const rech = document.querySelector('#search');
 const rate = document.querySelectorAll('.fa-star');
-const less = document.getElementById('less');
-const more = document.getElementById('more');
+
 
 rate.forEach(star => {
     star.addEventListener('click', () => {
@@ -45,22 +44,36 @@ shop.addEventListener('click', () => {
 
 
  /*  ajout d'element dans le panier */
-const sousContent = document.querySelector(".sous-content")
+const sousContent = document.querySelector(".sous-content");
+
 
 const addArticle =document.querySelectorAll('.bouton');
 addArticle.forEach(bouton => {
     bouton.addEventListener('click', event => {
         const contain = event.target.closest('.contain');
         addToCart(contain);
+       
     });
+
+    
 });
 
-const addToCart = contain => {
-    const articleImage = contain.querySelector("img").src;
+const addToCart = (contain) => {
     const articleDescription = contain.querySelector(".description").textContent;
-    const articlePrix = contain.querySelector(".prix").textContent;
+    const articleImage = contain.querySelector("img").src;
+    const articlePrix = contain.querySelector(".prixA").textContent;
+  
     const sousArticle = document.createElement("div");
+    /* const repeat = sousContent.querySelectorAll(".article-title");
+                   for( let article of repeat){
+                     if(article.textContent === articleDescription){
+                        alert("Le produit a déjà été utilisé");
+                        return;
+                     }
 
+                   }
+                        console.log(repeat);
+ */
     sousArticle.classList.add("article");
 
     sousArticle.innerHTML = `<div class="article-image">
@@ -68,7 +81,10 @@ const addToCart = contain => {
                             </div>
                             <div class="article-description">    
                                 <div class="article-contain">
-                                    <p>${articleDescription}  <br><span>${articlePrix}</span></p>
+                                    <p>
+                                        <span class="article-title"> ${articleDescription} </span>  <br/>
+                                        <span class="article-prix"> ${articlePrix} </span>
+                                    </p>
                                     <div class="article-qte">
                                         <div id="less"> - </div>
                                         <div class="qte" >1</div>
@@ -84,12 +100,31 @@ const addToCart = contain => {
                             sousContent.appendChild(sousArticle);
                             /*  Supprimer des éléments dans le panier  */
 
+                            
+                            sousArticle.querySelector(".article-qte").addEventListener("click", event => {
+                                const less = sousArticle.querySelector("#less");
+                                const more = sousArticle.querySelector("#more");
+                                const number = sousArticle.querySelector('.qte');
+                                let quantity = number.textContent;
+                                
+                                if(event.target.id === "less" && quantity > 1){
+                                    
+                                quantity--;
+                                if(quantity === 1){
+                                    less.style.color ="#999";
+                                }
+                                }else if(event.target.id === "more"){
+                                quantity++;
+                                more.style.color = "#333";
+                                }
+                            number.textContent = quantity;
+                            });
+                            
                             sousArticle.querySelector('.fa-trash-can').addEventListener('click', () =>{
                             sousArticle.remove();
-        })
-        };
 
 
+                        }); 
 
-
-    });
+    };
+});

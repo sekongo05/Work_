@@ -204,7 +204,7 @@ hr{
      height: 90px;
 }
 .sous-content .article-description {
-    /* border: 1px solid rgb(41, 12, 147); */
+   /*  border: 1px solid rgb(41, 12, 147); */
     margin-left: 10px;
     display: flex;
     width: 150px;
@@ -226,26 +226,25 @@ hr{
     transition: .5s ease;
 }
 .article-contain p{
-    /* border: 1px solid rgb(195, 14, 14); */
+    /* border: 3px solid rgb(154, 24, 111); */
     width: 150px;
     height: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.article-contain span{
+ .article-contain  p .article-prix{  
     margin-top: 5px;
     width: 70px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
     display: flex;
-    border: 0px solid black;
+   /*  border: 4px solid black; */
 }
 .article-contain .article-qte{
-    /*  border: 1px solid black; */
+   /*   border: 1px solid black; */
      display: flex;
      width: 80px;
 }
 .article-contain{
-   /*  border: 1px solid rgb(116, 5, 5); */
+   /*  border: 2px solid rgb(116, 5, 5); */
     margin-top: 15px;
     margin-left: 10px;
 }
@@ -586,7 +585,7 @@ hr{
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
 }
-.menu .menu-contain .contain .prix span{
+.menu .menu-contain .contain span{
     font-size: 12px;
     opacity: 0.5;
     text-decoration: line-through;
@@ -1079,6 +1078,7 @@ hr{
     display: flex;
     align-items: center;
     height: 230px;
+    border: var(--grey);
     justify-content: center;
     
 }
@@ -1086,7 +1086,7 @@ hr{
 .blog-thé{
     width: 400px;
     height: 230px;
-    object-fit: contain;
+  
 }
 
 .blog-thé:hover{
