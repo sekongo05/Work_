@@ -44,7 +44,7 @@ shop.addEventListener('click', () => {
 
 
  /*  ajout d'element dans le panier */
-const sousContent = document.querySelector(".sous-content");
+
 
 
 const addArticle =document.querySelectorAll('.bouton');
@@ -54,26 +54,25 @@ addArticle.forEach(bouton => {
         addToCart(contain);
        
     });
-
-    
 });
+const sousContent = document.querySelector(".sous-content");
 
-const addToCart = (contain) => {
+    const addToCart = (contain) => {
+
     const articleDescription = contain.querySelector(".description").textContent;
     const articleImage = contain.querySelector("img").src;
     const articlePrix = contain.querySelector(".prixA").textContent;
   
-    const sousArticle = document.createElement("div");
-    /* const repeat = sousContent.querySelectorAll(".article-title");
-                   for( let article of repeat){
-                     if(article.textContent === articleDescription){
-                        alert("Le produit a déjà été utilisé");
-                        return;
-                     }
-
+    const tired = sousContent.querySelectorAll(".article-title");
+            for(article of tired) {       
+                   if(article.textContent === articleDescription){
+                    alert("l'article a déjà été ajouté!!")
                    }
-                        console.log(repeat);
- */
+               return;
+            }           
+           
+
+    const sousArticle = document.createElement("div");               
     sousArticle.classList.add("article");
 
     sousArticle.innerHTML = `<div class="article-image">
@@ -98,7 +97,7 @@ const addToCart = (contain) => {
                             
                             
                             sousContent.appendChild(sousArticle);
-                            /*  Supprimer des éléments dans le panier  */
+                            
 
                             
                             sousArticle.querySelector(".article-qte").addEventListener("click", event => {
@@ -118,13 +117,48 @@ const addToCart = (contain) => {
                                 more.style.color = "#333";
                                 }
                             number.textContent = quantity;
-                            });
-                            
+
+                           total();
+
+                        });
+                   
+                   
+
+                            /*  Supprimer des éléments dans le panier  */
+
                             sousArticle.querySelector('.fa-trash-can').addEventListener('click', () =>{
                             sousArticle.remove();
-
-
+                                
+                                total();
                         }); 
+                         total()    ;    
+    }; 
+ 
+      
+      
+    
+ 
 
-    };
+
+    
+
+ 
+  
+          const total= ()=>{
+            const prixTotal = document.querySelector('.Total');
+            const sousArticle = sousContent.querySelectorAll('.article')
+            let calculTotal= 0;
+            sousArticle.forEach(article =>{
+                const prixArticle = article.querySelector('.article-prix');
+                const quantiteArticle = article.querySelector('.qte');
+                const prix = prixArticle.textContent.replace("F", "");
+                const quantité= quantiteArticle.textContent;
+                calculTotal += prix*quantité;
+            })
+            prixTotal.textContent = calculTotal+ " FCFA";
+            prixTotal.style.color="red";
+
+        }
+       
+
 });

@@ -196,7 +196,8 @@ hr{
 }
 
 .sous .article .article-image{
-     /* border: 1px solid black; */
+    /*  border: 1px solid black; */
+     box-shadow:  5px  5px 5px rgba(67, 65, 65, 0.5);
      width: 110px;
      display: flex;
      justify-content: center;
