@@ -394,23 +394,25 @@ hr{
 
 
 #corp_1{
-    border: 0px solid rgb(160, 13, 13);
+  /*   border: 1px solid rgb(160, 13, 13); */
     min-height: 100vh;
     display: flex;
     position: relative;
     justify-content: center;
-    background: url('Images/coffee-424763.jpg');
+    background: url('Images/bgd.jpg');
     background-size: cover;
-    background-position: center;
+   background-position: t;
     background-repeat: no-repeat;
     flex-direction: column;
 }
 
 #corp_1 .div{
-    border: 0px solid rgb(206, 191, 191);
+   /*  border: 1px solid rgb(206, 191, 191); */
     height: 80px;
     width: 800px;
-    padding-left: 100px;
+    margin-left: 0px;
+    margin-top: -20px;
+    padding-left: 20px;
     color: white;
 }
 #corp_1 .get{
@@ -449,7 +451,8 @@ hr{
     font-weight: 700;
     letter-spacing: 3px;
     line-height: 1.1;
-    color: white;
+    color:#e0aa52;
+  /*   border: 1px solid white; */
     font-style: normal;
 }
 
@@ -657,7 +660,7 @@ hr{
 }
 
 .product .titre{
-    border: 1px solid white;
+   /*  border: 1px solid white; */
     padding-top: 30px;
     padding-bottom: 5px;
 }
@@ -680,7 +683,7 @@ hr{
     padding: 50px;
     justify-content: space-between;
     align-items: center;
-   border: var(--white);
+ /*   border: var(--white); */
 }
 
 #product-container .contain{
