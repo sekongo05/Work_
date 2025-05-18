@@ -43,9 +43,11 @@ shop.addEventListener('click', () => {
 
 
 
+
+
  /*  ajout d'element dans le panier */
 
-
+ 
 
 const addArticle =document.querySelectorAll('.bouton');
 addArticle.forEach(bouton => {
@@ -55,6 +57,10 @@ addArticle.forEach(bouton => {
        
     });
 });
+
+
+
+
 const sousContent = document.querySelector(".sous-content");
 
     const addToCart = (contain) => {
@@ -66,7 +72,7 @@ const sousContent = document.querySelector(".sous-content");
     const tired = sousContent.querySelectorAll(".article-title");
             for( let article of tired) {       
                    if(article.textContent.trim() === articleDescription.trim()){
-                    alert("l'article a déjà été ajouté!!")
+                    alert("l'article a déjà été ajouté !!")
                     return;
                    }
             }           
@@ -140,7 +146,20 @@ const sousContent = document.querySelector(".sous-content");
  
 
 
-    
+    /* le bouton qui s'affiche sur le panier lorsqu'il ya un élément à l'interieur        */
+const boutton = document.querySelectorAll('.bouton')
+boutton.forEach(Element=> {
+     Element.addEventListener('click', () =>{
+       
+        
+        const attention = document.querySelector('#alerte');
+        attention.classList.add('visible');
+        console.log(attention);
+       }
+        
+       
+     );
+ });
 
  
   
