@@ -64,13 +64,13 @@ const sousContent = document.querySelector(".sous-content");
     const articlePrix = contain.querySelector(".prixA").textContent;
   
     const tired = sousContent.querySelectorAll(".article-title");
-            for(article of tired) {       
-                   if(article.textContent === articleDescription){
+            for( let article of tired) {       
+                   if(article.textContent.trim() === articleDescription.trim()){
                     alert("l'article a déjà été ajouté!!")
+                    return;
                    }
-               return;
             }           
-           
+           console.log(tired)
 
     const sousArticle = document.createElement("div");               
     sousArticle.classList.add("article");
@@ -81,8 +81,8 @@ const sousContent = document.querySelector(".sous-content");
                             <div class="article-description">    
                                 <div class="article-contain">
                                     <p>
-                                        <span class="article-title"> ${articleDescription} </span>  <br/>
-                                        <span class="article-prix"> ${articlePrix} </span>
+                                        <span class="article-title">${articleDescription}</span>  <br/>
+                                        <span class="article-prix">${articlePrix}</span>
                                     </p>
                                     <div class="article-qte">
                                         <div id="less"> - </div>
