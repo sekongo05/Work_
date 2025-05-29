@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --black: 1px solid black;
+    --white: 1px solid white;
+    --principal: #eb9b1a;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    border: var(--white);
+    background-image:url(Images/Cozy\ Autumn\ Coffee\ Scene_\ Warmth\ in\ Every\ Cup.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulaire1{
+    border: var(--white);
+    width: 750px;
+    justify-content: center;
+    height: 80vh;
+    border-radius: 15px;
+    background-color: transparent;
+}
+.text{
+    border: var(--white);
+    height: 70px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.text h2{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.part{
+    display: flex;
+}
+
+.formulaire-part{
+    border: var(--white);
+    display: flex;
+    height: 40vh;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.form-part{
+    border: var(--white);
+    margin-left: 20px;
+}
+.genre{
+     border: var(--white);
+     height: 70px;
+}
+.inp1{
+  /*   border: var(--white); */
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+input[type="text"],[type="password"],[type="mail"],[type="number"],[type="date"]{
+    height: 320px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 2px 2px 2px rgba(225, 225, 225, 0.7);
+    width: 320px;
+    padding-left: 10px;
+}
+
+input[type="text"]:focus,[type="password"]:focus,[type="mail"]:focus,[type="number"]:focus,[type="date"]:focus{
+    outline:1px solid rgba(225, 225, 225, 0.7) ;
+}
+
+label{
+    color: white;
+}
