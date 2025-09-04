@@ -10,11 +10,38 @@
 <body>
     <form action="#" method="POST">
         <section>
+            <!------------Connexion---------------------------->
+            <div class="connexion">
+                <div class="text">
+                    <h2>Connexion</h2>
+                    <div>
+                        <a href="Restau.html"><i class="fa-solid fa-xmark"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="inp1">
+                            <label for="nomU1">Nom d'utilisateur</label>
+                            <input type="text" id="nomU1">
+                    </div>
+                    <div class="inp1">
+                            <label for="mtpasse1">Mot de passe</label>
+                            <input type="password" id="mtpasse1">
+                    </div>
+                </div>
+                <div class="bouton">
+                    <a href="Restau.html"><button class="input">Connecter</button>></a>
+                    
+                </div>
+                <div class="forget">
+                    <p class="mot">S'inscrire<br/>Mot de passe oublié</p>
+                </div>
+            </div>
+            <!---------------Inscription--------------------------->
             <div class="formulaire1">
                 <div class="text">
                     <h2> Inscription </h2>
                     <div>
-                        <i class="fa-solid fa-xmark"></i>
+                        <a href="Restau.html"><i class="fa-solid fa-xmark"></i></a>
                     </div>
                 </div>
                 <div class="part">
@@ -59,17 +86,18 @@
                     <p>Genre</p>
                     <div class="sexe">
                         <div>
-                            <label for="gr">Masculin</label>
-                            <input type="radio" value="masculin" name="genre" id="gr">
+                            <label for="Ma">Masculin</label>
+                            <input type="radio" value="masculin" name="genre" id="Ma">
                         </div>
                         <div>
-                            <label for="gr">feminin</label>
-                            <input type="radio" value="feminin" name="genre" id="gr">
+                            <label for="Fe">feminin</label>
+                            <input type="radio" value="feminin" name="genre" id="Fe">
                         </div>
                     </div>
                 </div>
                 <div class="enregistrer">
-                    <input type="submit" value="Enregistrer" class="inscrit">
+                    <button class="inscrit">Enregistrer</button>
+                   
                 </div>
             </div>
         </section>
@@ -77,6 +105,6 @@
 
     </form>
 
-    
+    <script src="connexion.js">    </script>
 </body>
 </html>

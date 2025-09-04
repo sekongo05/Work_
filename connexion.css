@@ -12,7 +12,7 @@ section{
     width: 100%;
     height: 100vh;
     border: var(--white);
-    background-image:url(Images/Cozy\ Autumn\ Coffee\ Scene_\ Warmth\ in\ Every\ Cup.jpeg);
+    background-image: url(Images/Cozy\ Autumn\ Coffee\ Scene_\ Warmth\ in\ Every\ Cup.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -27,6 +27,9 @@ section{
     width: 750px;
     justify-content: center;
     height: 70vh;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
     border-radius: 15px;
     background-color: transparent;
 }
@@ -54,7 +57,7 @@ section{
     cursor: pointer;
 }
 .text h2{
-    color:rgb(46, 10, 10);
+    color:rgb(255, 255, 255);
     font-size: 40px;
     font-weight: bold;
 }
@@ -80,17 +83,21 @@ section{
 .genre{
     /*  border: var(--white); */
      height: 55px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
      
 }
 
 .genre p{
-   /*  border: var(--white); */
+    /* border: var(--white); */
     height: 25px;
     color: white;
     display: flex;
     align-items: center;
     font-weight: bold;
-    padding-left: 10px;
+    justify-content: center;
     font-size: 18px;
 }
 
@@ -127,10 +134,10 @@ label{
 }
 
 .genre .sexe{
-  /*   border: var(--black); */
+   /*  border: var(--black); */
     width: 40%;
     align-items: center;
-    margin-left: 200px;
+    
     display: flex;
     justify-content: space-between;
 }
@@ -163,3 +170,69 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0.7; /* Ajuste la transparence */
 }
 
+/*************************************************************************/
+
+.connexion{
+    border: var(--white);
+    width: 450px;
+    border-radius:15px ;
+    z-index: 2000;
+    flex-direction: column;
+    display: flex;
+    height: 370px;
+    box-shadow: 2px 2px 2px 2px rgba(23, 22, 22, 0.7);
+}
+.connexion .none{
+    display: none;
+}
+.connexion input[type="text"]{
+    width: 400px;
+    height: 100px;
+}
+.connexion input[type="password"]{
+    width: 400px;
+    height: 100px;
+}
+
+.connexion .inp1{
+    margin-top: 30px;
+}
+
+.bouton{
+   /*  border: var(--white); */
+    height: 40px ;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bouton .input{
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px ;
+    border: none;
+    background-color: rgb(46, 10, 10);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.forget{
+   /*  border: var(--white); */
+    height: 40px;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: right;
+}
+
+.forget p{
+    cursor: pointer;
+    text-decoration:underline;
+    color: white;
+}
+.forget p:hover{
+    color: #eb9b1a;
+}
